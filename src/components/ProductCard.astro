@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+
+interface IProductCardProps {
+  title: string;
+  description: string;
+  image: string;
+  color?: ColorType;
+  url: string;
+}
+
+const { title, description, image, color = 'gray', url }: IProductCardProps = Astro.props as IProductCardProps;
+
+const cardContainerColor = {
+  green: "bg-green-color",
+  white: "bg-white-color",
+  gray: "bg-gray-color",
+  dark: "bg-dark-color",
+};
+
+const cardTitleColor = {
+  green: "bg-white-color",
+  white: "bg-green-color",
+  gray: "bg-green-color",
+  dark: "bg-green-color",
+};
+
+const cardIconColor = {
+  green: "bg-dark-color",
+  white: "bg-dark-color",
+  gray: "bg-dark-color",
+  dark: "bg-white-color",
+};
+
+const cardArrowColor = {
+  green: "/icons/arrow-green.svg",
+  white: "/icons/arrow-green.svg",
+  gray: "/icons/arrow-green.svg",
+  dark: "/icons/arrow-dark.svg",
+};
+
+const cardTextColor = {
+  green: "text-dark-color",
+  white: "text-dark-color",
+  gray: "text-dark-color",
+  dark: "text-white-color",
+};
+---
+
+<div class=`${cardContainerColor[color]} h-[335px] md:h-[310px] p-12 border border-dark-color rounded-[45px] shadow-card`>
+  <div class="h-full w-full flex justify-between gap-8">
+    <div class="w-full md:w-1/2 flex flex-col justify-between gap-8">
+      <h3 class=`${cardTitleColor[color]} w-fit-content text-[26px] md:text-3xl font-medium px-2 py-1 rounded-lg whitespace-nowrap`>{title}</h3>
+      <div class="flex items-end md:items-center justify-between md:justify-start gap-4">
+        <a href={url} target="_blank" rel="noopener noreferrer" arial-label="Ver más información del producto">
+          <span class=`${cardIconColor[color]} w-10 h-10 flex items-center justify-center rounded-full`>
+            <Image src=`${cardArrowColor[color]}` alt="Ver más información del producto" width="20" height="20" />
+          </span>
+        </a>
+        <a href={url} target="_blank" rel="noopener noreferrer" arial-label="Ver más información del producto">
+          <p class=`${cardTextColor[color]} hidden md:block whitespace-nowrap cursor-pointer hover:underline`>Ver más</p>
+        </a>
+        <Image src={`/images/${image}.webp`} class="block md:hidden" alt={description} width="140" height="120" />
+      </div>
+    </div>
+    <div class="hidden md:w-1/2 md:flex items-center justify-end">
+      <Image src={`/images/${image}.webp`} alt={description} width="210" height="180" />
+    </div>
+  </div>
+</div>

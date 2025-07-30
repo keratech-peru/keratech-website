@@ -1,0 +1,20 @@
+---
+import MembersList from "../constants/members";
+import TeamCard from "./TeamCard.astro";
+---
+
+<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+  {
+    MembersList.map((member: MemberType) => (
+      <li>
+        <TeamCard
+          title={member.title}
+          description={member.description}
+          role={member.role}
+          image={member.image}
+          url={member.url}
+        />
+      </li>
+    ))
+  }
+</ul>

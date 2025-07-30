@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import Button from "./Button";
+---
+
+<section>
+  <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-8 py-8 md:py-12">
+    <div class="w-full md:w-1/2 flex flex-col gap-5 md:gap-8">
+      <h1 class="text-5xl md:text-6xl font-medium">Impulsamos tu negocio con tecnología</h1>
+      <Image src="/icons/illustration.svg" class="block md:hidden" alt="Desarrollamos soluciones digitales a medida para pequeñas y medianas empresas. Desde sitios web y aplicaciones hasta soporte técnico, te ayudamos a transformar tu negocio con tecnología innovadora y eficiente." width="600" height="310" />
+      <p class="text-base md:text-xl">Desarrollamos soluciones digitales a medida para pequeñas y medianas empresas. Desde sitios web y aplicaciones hasta soporte técnico, te ayudamos a transformar tu negocio con tecnología innovadora y eficiente.</p>
+      <a href="/#contact" class="hidden md:block" arial-label="Agenda una reunión">
+        <Button client:load text="Agenda una reunión" />
+      </a>
+    </div>
+    
+    <div class="hidden md:block w-1/2">
+      <Image src="/icons/illustration.svg" alt="Impulsamos tu negocio con tecnología" width="600" height="500" />
+    </div>
+
+    <a href="/#contact" class="block md:hidden" arial-label="Agenda una reunión">
+      <Button client:load text="Agenda una reunión" hasFullWidth />
+    </a>
+  </div>
+</section>

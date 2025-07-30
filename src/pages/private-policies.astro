@@ -1,0 +1,82 @@
+---
+import '@fontsource/space-grotesk';
+import Header from "../components/Header";
+import Footer from '../components/Footer.astro';;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Keratech Perú es una agencia de innovación digital que ofrece soluciones tecnológicas para empresas, optimizando sus procesos y potenciando su crecimiento." />
+		<title>Keratech Perú - Políticas privadas</title>
+	</head>
+	<body class="text-base md:text-xl">
+		<div class="w-full">
+			<Header client:load />
+			<main class="w-[90%] max-w-[1200px] mx-auto">
+				<div class="pt-0 py-12 md:pt-12 md:py-24">
+					<section class="flex flex-col items-center md:items-start gap-4 py-4 md:py-6">
+						<h2 class="bg-green-color w-fit-content h-fit-content text-2xl md:text-[40px] text-center md:text-left font-medium px-2 py-1 rounded-lg">1. Información que recopilamos</h2>
+						<p class="text-base md:text-lg text-center md:text-left">Cuando los usuarios nos contactan a través de nuestro sitio web, recopilamos la siguiente información:</p>
+						<ul class="text-base md:text-lg text-center md:text-left">
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Nombre</p>
+							</li>
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Correo electrónico</p>
+							</li>
+						</ul>
+					</section>
+
+					<section class="flex flex-col items-center md:items-start gap-4 py-4 md:py-6">
+						<h2 class="bg-green-color w-fit-content h-fit-content text-2xl md:text-[40px] text-center md:text-left font-medium px-2 py-1 rounded-lg">2. Uso de la información</h2>
+						<p class="text-base md:text-lg text-center md:text-left">Utilizamos la información proporcionada para los siguientes fines:</p>
+						<ul class="text-base md:text-lg text-center md:text-left">
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Enviar información sobre nuestros servicios y novedades.</p>
+							</li>
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Realizar actividades de marketing, como el envío de correos electrónicos promocionales.</p>
+							</li>
+						</ul>
+					</section>
+
+					<section class="flex flex-col items-center md:items-start gap-4 py-4 md:py-6">
+						<h2 class="bg-green-color w-fit-content h-fit-content text-2xl md:text-[40px] text-center md:text-left font-medium px-2 py-1 rounded-lg">3. Compartición de datos</h2>
+						<p class="text-base md:text-lg text-center md:text-left">No compartimos ni vendemos la información de nuestros usuarios a terceros. Sin embargo, utilizamos Google Analytics para analizar el tráfico y mejorar la experiencia del usuario en nuestro sitio web.</p>
+					</section>
+
+					<section class="flex flex-col items-center md:items-start gap-4 py-4 md:py-6">
+						<h2 class="bg-green-color w-fit-content h-fit-content text-2xl md:text-[40px] text-center md:text-left font-medium px-2 py-1 rounded-lg">4. Seguridad de la información</h2>
+						<p class="text-base md:text-lg text-center md:text-left">Tomamos medidas razonables para proteger la información personal de nuestros usuarios. Implementamos prácticas de seguridad como:</p>
+						<ul class="text-base md:text-lg text-center md:text-left">
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Acceso restringido a la información.</p>
+							</li>
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Uso de protocolos de seguridad en nuestro sitio web.</p>
+							</li>
+							<li>
+								<p>-&nbsp;&nbsp;&nbsp;Protección contra accesos no autorizados, pérdidas o alteraciones de datos.</p>
+							</li>
+						</ul>
+					</section>
+
+					<section class="flex flex-col items-center md:items-start gap-4 py-4 md:py-6">
+						<h2 class="bg-green-color w-fit-content h-fit-content text-2xl md:text-[40px] text-center md:text-left font-medium px-2 py-1 rounded-lg">6. Legislación aplicable</h2>
+						<p class="text-base md:text-lg text-center md:text-left">Keratech es una empresa constituida y legalmente operativa en Perú. Cumplimos con la legislación peruana de protección de datos personales y garantizamos la seguridad y privacidad de la información recopilada.</p>
+					</section>
+
+					<section class="flex flex-col items-center md:items-start gap-4 py-4 md:py-6">
+						<h2 class="bg-green-color w-fit-content h-fit-content text-2xl md:text-[40px] text-center md:text-left font-medium px-2 py-1 rounded-lg">7. Contacto</h2>
+						<p class="text-base md:text-lg text-center md:text-left">Si tienes preguntas sobre esta Política de Privacidad, puedes escribirnos a: info@keratechperu.com</p>
+					</section>
+				</div>
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>
