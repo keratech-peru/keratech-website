@@ -1,0 +1,7 @@
+# Permitir servir SVG
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+<FilesMatch "\.svg$">
+  Require all granted
+</FilesMatch>
