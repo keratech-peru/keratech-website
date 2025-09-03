@@ -1,10 +1,12 @@
 ---
 import { Image } from 'astro:assets';
+import ArrowGreenIcon from "@icons/arrow-green.svg";
+import ArrowDarkIcon from "@icons/arrow-dark.svg";
 
 interface IProductCardProps {
   title: string;
   description: string;
-  image: string;
+  image: any;
   color?: ColorType;
   url: string;
 }
@@ -33,10 +35,10 @@ const cardIconColor = {
 };
 
 const cardArrowColor = {
-  green: "/icons/arrow-green.svg",
-  white: "/icons/arrow-green.svg",
-  gray: "/icons/arrow-green.svg",
-  dark: "/icons/arrow-dark.svg",
+  green: ArrowGreenIcon,
+  white: ArrowGreenIcon,
+  gray: ArrowGreenIcon,
+  dark: ArrowDarkIcon,
 };
 
 const cardTextColor = {
@@ -50,21 +52,21 @@ const cardTextColor = {
 <div class=`${cardContainerColor[color]} h-[335px] md:h-[310px] p-12 border border-dark-color rounded-[45px] shadow-card`>
   <div class="h-full w-full flex justify-between gap-8">
     <div class="w-full md:w-1/2 flex flex-col justify-between gap-8">
-      <h3 class=`${cardTitleColor[color]} w-fit-content text-[26px] md:text-3xl font-medium px-2 py-1 rounded-lg whitespace-nowrap`>{title}</h3>
+      <h3 class=`${cardTitleColor[color]} w-fit text-[26px] md:text-3xl font-medium px-2 py-1 rounded-lg whitespace-nowrap`>{title}</h3>
       <div class="flex items-end md:items-center justify-between md:justify-start gap-4">
         <a href={url} target="_blank" rel="noopener noreferrer" arial-label="Ver más información del producto">
           <span class=`${cardIconColor[color]} w-10 h-10 flex items-center justify-center rounded-full`>
-            <Image src=`${cardArrowColor[color]}` alt="Ver más información del producto" width="20" height="20" />
+            <Image src={cardArrowColor[color]} alt="Ver más información del producto" width="20" height="20" />
           </span>
         </a>
         <a href={url} target="_blank" rel="noopener noreferrer" arial-label="Ver más información del producto">
           <p class=`${cardTextColor[color]} hidden md:block whitespace-nowrap cursor-pointer hover:underline`>Ver más</p>
         </a>
-        <Image src={`/images/${image}.webp`} class="block md:hidden" alt={description} width="140" height="120" />
+        <Image src={image} class="block md:hidden" alt={description} width="140" height="120" />
       </div>
     </div>
     <div class="hidden md:w-1/2 md:flex items-center justify-end">
-      <Image src={`/images/${image}.webp`} alt={description} width="210" height="180" />
+      <Image src={image} alt={description} width="210" height="180" />
     </div>
   </div>
 </div>

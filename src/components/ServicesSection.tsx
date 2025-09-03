@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import ServicesList from '../constants/services'
-import ServiceCard from './ServiceCard'
+import ServicesList from '@constants/services'
+import ServiceCard from '@components/ServiceCard'
 
 const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState<string>('00')

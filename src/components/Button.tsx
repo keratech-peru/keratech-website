@@ -53,7 +53,7 @@ const Button = ({
 
   return (
     <button
-      className={`${hasFullWidth ? 'w-full' : 'w-fit-content'} ${buttonStyleColor()} ${buttonOpacity()} h-[68px] text-xl px-8 py-5 border rounded-xl cursor-pointer transition-all duration-300 ease-in-out`}
+      className={`${hasFullWidth ? 'w-full' : 'w-fit'} ${buttonStyleColor()} ${buttonOpacity()} h-[68px] text-xl px-8 py-5 border rounded-xl cursor-pointer transition-all duration-300 ease-in-out`}
       disabled={isLoading || isDisabled}
       onClick={onClick}
     >

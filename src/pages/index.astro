@@ -1,59 +1,42 @@
 ---
-import '@fontsource/space-grotesk';
 import { Image } from 'astro:assets';
-import Header from "../components/Header";
-import Hero from '../components/Hero.astro';
-import Section from '../components/Section.astro';
-import Footer from '../components/Footer.astro';
-import ServicesSection from '../components/ServicesSection';
-import FormSection from '../components/FormSection';
-import ProductsSection from '../components/ProductsSection.astro';
-import TeamSection from '../components/TeamSection.astro';
-import TechSection from '../components/TechSection.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import ServicesSection from '@components/ServicesSection';
+import FormSection from '@components/FormSection';
+import ProductsSection from '@components/ProductsSection.astro';
+import TeamSection from '@components/TeamSection.astro';
+import TechSection from '@components/TechSection.astro';
+import ContactIllustrationImage from "@images/contact-illustration.webp";
+import Layout from '@layouts/Layout.astro';
 ---
 
-<html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Keratech Perú es una agencia de innovación digital que ofrece soluciones tecnológicas para empresas, optimizando sus procesos y potenciando su crecimiento." />
-		<title>Keratech Perú</title>
-	</head>
-	<body class="text-base md:text-xl">
-		<div class="w-full">
-			<Header client:load />
-			<main class="w-[90%] max-w-[1200px] mx-auto">
-				<!-- Sección de hero -->
-				<Hero />
-				<!-- Sección de tecnologías -->
-				<TechSection />
-				<!-- Sección de servicios -->
-				<Section id="services" title="Servicios" description="En nuestra agencia de innovación digital, ofrecemos una variedad de servicios para ayudar a las empresas a crecer y tener éxito en línea. Estos servicios incluyen:">
-					<ServicesSection client:visible />
-				</Section>
-				<!-- Sección de productos -->
-				<Section id="products" title="Productos" description="Desarrollamos soluciones tecnológicas a medida que impulsan la transformación digital de pequeñas y medianas empresas, optimizando sus procesos y potenciando su crecimiento.">
-					<ProductsSection />
-				</Section>
-				<!-- Sección de equipo -->
-				<Section id="about" title="El&nbsp;equipo" description="Nuestro equipo está formado por expertos en tecnología e innovación, comprometidos en ofrecer soluciones personalizadas que se adapten a las necesidades de cada cliente.">
-					<TeamSection />
-				</Section>
-				<!-- Sección de contacto -->
-				<Section id="contact" title="Contáctanos" description="Escríbenos y cuéntanos qué necesitas. Juntos encontraremos la mejor solución para tu negocio.">
-					<div class="relative bg-gray-color px-8 lg:px-24 py-10 lg:py-16 rounded-[45px]">
-						<div class="w-full md:w-1/2">
-							<FormSection client:visible />
-						</div>
-						<div class="hidden md:block absolute top-20 right-0">
-							<Image src="/images/contact-illustration.webp" alt="Escríbenos y cuéntanos qué necesitas. Juntos encontraremos la mejor solución para tu negocio." width="345" height="650" />
-						</div>
-					</div>
-				</Section>
-			</main>
-			<Footer />
+<Layout title="Home Page" description="Keratech Perú es una agencia de innovación digital que ofrece soluciones tecnológicas para empresas, optimizando sus procesos y potenciando su crecimiento.">
+	<!-- Sección de hero -->
+	<Hero />
+	<!-- Sección de tecnologías -->
+	<TechSection />
+	<!-- Sección de servicios -->
+	<Section id="services" title="Servicios" description="En nuestra agencia de innovación digital, ofrecemos una variedad de servicios para ayudar a las empresas a crecer y tener éxito en línea. Estos servicios incluyen:">
+		<ServicesSection client:load />
+	</Section>
+	<!-- Sección de productos -->
+	<Section id="products" title="Productos" description="Desarrollamos soluciones tecnológicas a medida que impulsan la transformación digital de pequeñas y medianas empresas, optimizando sus procesos y potenciando su crecimiento.">
+		<ProductsSection />
+	</Section>
+	<!-- Sección de equipo -->
+	<Section id="about" title="El&nbsp;equipo" description="Nuestro equipo está formado por expertos en tecnología e innovación, comprometidos en ofrecer soluciones personalizadas que se adapten a las necesidades de cada cliente.">
+		<TeamSection />
+	</Section>
+	<!-- Sección de contacto -->
+	<Section id="contact" title="Contáctanos" description="Escríbenos y cuéntanos qué necesitas. Juntos encontraremos la mejor solución para tu negocio.">
+		<div class="relative bg-gray-color px-8 lg:px-24 py-10 lg:py-16 rounded-[45px]">
+			<div class="w-full md:w-1/2">
+				<FormSection client:load />
+			</div>
+			<div class="hidden md:block absolute top-20 right-0">
+				<Image src={ContactIllustrationImage} alt="Escríbenos y cuéntanos qué necesitas. Juntos encontraremos la mejor solución para tu negocio." width="345" height="650" />
+			</div>
 		</div>
-	</body>
-</html>
+	</Section>
+</Layout>

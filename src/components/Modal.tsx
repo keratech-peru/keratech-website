@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
-import '../styles/modal.css'
-import Button from './Button'
+import Button from '@components/Button'
+import CloseIcon from '@icons/close.svg'
+import '@styles/modal.css'
 
 interface ModalProps {
   title?: string
@@ -48,7 +49,7 @@ const Modal: React.FC<ModalProps> = ({
           onClick={onClose}
         >
           <img
-            src="/icons/close.svg"
+            src={CloseIcon.src}
             width={28}
             height={28}
             alt="Cerrar el modal"

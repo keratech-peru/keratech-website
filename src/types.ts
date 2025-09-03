@@ -13,7 +13,7 @@ type ProductType = {
   title: string
   description: string
   color: string
-  image: string
+  image: ImageMetadata
   url: string
 }
 
@@ -24,7 +24,7 @@ type MemberType = {
   title: string
   description: string
   role: string
-  image: string
+  image: ImageMetadata
   url: string
 }
 

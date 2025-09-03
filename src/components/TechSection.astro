@@ -1,14 +1,16 @@
 ---
 import { Image } from 'astro:assets';
+import GoogleLogoImage from "@images/google-logo.webp";
+import GoogleCloudLogoImage from "@images/google-cloud-logo.webp";
 ---
 
 <section class="py-8 md:py-12 md:pb-24">
   <ul class="h-10 flex items-center gap-12 md:gap-24">
     <li class="h-full flex items-center justify-center">
-      <Image src="/images/google-logo.webp" alt="Google" width="122" height="40" />
+      <Image src={GoogleLogoImage} alt="Google" width="122" height="40" />
     </li>
     <li class="h-full flex items-center justify-center">
-      <Image src="/images/google-cloud-logo.webp" alt="Google Cloud" width="256" height="40" />
+      <Image src={GoogleCloudLogoImage} alt="Google Cloud" width="256" height="40" />
     </li>
   </ul>
 </section>

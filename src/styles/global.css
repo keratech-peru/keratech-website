@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-green-color: #b9ff66;
+  --color-dark-color: #191a23;
+  --color-gray-secondary-color: #292a32;
+  --color-gray-color: #f3f3f3;
+  --color-white-color: #ffffff;
+  --shadow-card: 0px 5px 0px 0px #191a23;
+  --font-sans:
+    'Space Grotesk', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import Button from './Button'
+import Button from '@components/Button'
+import HamburguerIcon from '@icons/hamburguer.svg'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
@@ -51,7 +52,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <img
-            src="/icons/hamburguer.svg"
+            src={HamburguerIcon.src}
             width={24}
             height={16}
             alt="Menú de Keratech"
@@ -59,10 +60,10 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`h-screen w-screen left-0 top-0 transition-all ease-in-out duration-300 ${isMenuOpen ? 'opacity-100 bg-black bg-opacity-50 fixed' : '-z-10 opacity-0 bg-transparent bg-opacity-0 hidden'}`}
+        className={`h-screen w-screen left-0 top-0 transition-all ease-in-out duration-300 ${isMenuOpen ? 'opacity-75 bg-black fixed' : '-z-10 opacity-0 bg-transparent bg-opacity-0 hidden'}`}
       ></div>
       <div
-        className={`fixed top-0 left-0 w-full h-full ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-all  ease-in-out duration-300 transform`}
+        className={`fixed top-0 left-0 w-full h-full ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-all ease-in-out duration-300 transform`}
         onClick={() => setIsMenuOpen(false)}
       >
         <nav className="absolute top-0 right-0 w-3/4 h-full bg-white shadow-lg flex flex-col items-center gap-6 py-6">

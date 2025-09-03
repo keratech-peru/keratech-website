@@ -1,3 +1,8 @@
+import HeraldoLogoImage from '@images/heraldo-logo.webp'
+import EdwinLogoImage from '@images/edwin-logo.webp'
+import KedeinLogoImage from '@images/kedein-logo.webp'
+import JoseLogoImage from '@images/jose-logo.webp'
+
 const MembersList: MembersType = [
   {
     index: '01',
@@ -5,7 +10,7 @@ const MembersList: MembersType = [
     description:
       '+5 años trabajando como desarrollador frontend. Mucha experiencia en React, Redux, y TypeScript.',
     role: '',
-    image: 'heraldo-logo',
+    image: HeraldoLogoImage,
     url: 'https://www.linkedin.com/in/heraldo-fortuna/',
   },
   {
@@ -14,7 +19,7 @@ const MembersList: MembersType = [
     description:
       '+4 años como desarrollador backend. Especializado en Python, MongoDB y Node.js.',
     role: '',
-    image: 'edwin-logo',
+    image: EdwinLogoImage,
     url: 'https://www.linkedin.com/in/edwin-mendoza-leon/',
   },
   {
@@ -23,7 +28,7 @@ const MembersList: MembersType = [
     description:
       '5+ años de experiencia en arquitectura de software. Especializado en microservicios, contenedores y orquestación.',
     role: '',
-    image: 'kedein-logo',
+    image: KedeinLogoImage,
     url: 'https://www.linkedin.com/in/kedein-rodriguez-gatica/',
   },
   {
@@ -32,7 +37,7 @@ const MembersList: MembersType = [
     description:
       '4+ años de experiencia como fullstack developer. Especializado en Ruby, React y Node.js.',
     role: '',
-    image: 'jose-logo',
+    image: JoseLogoImage,
     url: 'https://www.linkedin.com/in/jos%C3%A9-heredia-880673189/',
   },
 ]

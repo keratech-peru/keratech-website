@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import Button from './Button'
-import Input from './Input'
-import RadioInput from './RadioInput'
-import Textarea from './Textarea'
-import Modal from './Modal'
+import Button from '@components/Button'
+import Input from '@components/Input'
+import RadioInput from '@components/RadioInput'
+import Textarea from '@components/Textarea'
+import Modal from '@components/Modal'
 
 const FormSection = () => {
   const [name, setName] = useState<string>('')

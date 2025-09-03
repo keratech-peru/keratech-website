@@ -1,3 +1,6 @@
+import MinusIcon from '@icons/minus.svg'
+import PlusIcon from '@icons/plus.svg'
+
 interface IServiceCardProps {
   index: string
   title: string
@@ -26,7 +29,7 @@ const ServiceCard = ({
           </div>
           <div className="bg-gray-color w-[30px] md:w-[58px] h-[30px] md:h-[58px] min-w-[30px] md:min-w-[58px] min-h-[30px] md:min-h-[58px] flex items-center justify-center border border-dark-color rounded-full">
             <img
-              src={isSelected ? '/icons/minus.svg' : '/icons/plus.svg'}
+              src={isSelected ? MinusIcon.src : PlusIcon.src}
               className="w-3 h-3 md:w-6 md:h-6"
               alt={description}
             />

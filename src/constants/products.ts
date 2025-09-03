@@ -1,3 +1,6 @@
+import ManyBrowsersImage from '@images/many-browsers.webp'
+import AnalyticsWebBrowserImage from '@images/analytics-web-browser.webp'
+
 const ProductsList: ProductsType = [
   {
     index: '01',
@@ -5,7 +8,7 @@ const ProductsList: ProductsType = [
     description:
       'Es un juego de predicción deportiva en el que puedes ganar dinero real.',
     color: 'white',
-    image: 'many-browsers',
+    image: ManyBrowsersImage,
     url: 'https://elgranzorro.com',
   },
   {
@@ -14,7 +17,7 @@ const ProductsList: ProductsType = [
     description:
       'Es una empresa enfocada en brindar soluciones constructivas que no solo cumplen con los más altos estándares de calidad, seguridad y medio ambiente, sino que también impulsan el desarrollo sostenible y la innovación en cada proyecto que emprende.',
     color: 'dark',
-    image: 'analytics-web-browser',
+    image: AnalyticsWebBrowserImage,
     url: 'https://df-proyectos.com',
   },
 ]
