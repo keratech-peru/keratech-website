@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  site: 'https://www.keratechperu.com',
+  site: 'https://www.keracodeperu.com',
   integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],

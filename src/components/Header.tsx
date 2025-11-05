@@ -9,7 +9,7 @@ const Header = () => {
     <header className="w-[90%] max-w-[1200px] mx-auto">
       <div className="h-20 md:h-32 flex items-center justify-between gap-6">
         <a href="/" aria-label="Vuelve a nuestra página principal aquí">
-          <p className="text-2xl md:text-4xl font-semibold">Keratech</p>
+          <p className="text-2xl md:text-4xl font-semibold">Keracode</p>
         </a>
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-10">
@@ -55,7 +55,7 @@ const Header = () => {
             src={HamburguerIcon.src}
             width={24}
             height={16}
-            alt="Menú de Keratech"
+            alt="Menú de Keracode"
           />
         </div>
       </div>
